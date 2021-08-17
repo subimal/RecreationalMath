@@ -5,6 +5,7 @@ class IntegerSequence:
                     "Fibonacci":[0,1],
                     "Ulam":[1,2]
                     }
+<<<<<<< HEAD
 
     def ThueMorse(self):
         seq='0'
@@ -15,6 +16,8 @@ class IntegerSequence:
 
         
 
+=======
+>>>>>>> c1d92db1143a39b3d1aa1189fa5cf5b90ff53329
     def Recaman(self):
         count=0
         self.seq['Recaman']=[]
@@ -184,6 +187,7 @@ class IntegerSequence:
             ans=ans+1
 
     def Abundant(self):
+<<<<<<< HEAD
         '''
         In number theory, an abundant number or excessive number is a number 
         for which the sum of its proper divisors is greater than the number 
@@ -220,6 +224,27 @@ class IntegerSequence:
         while True:
             yield n*(n+1)/2
             n=n+1
+=======
+    	'''
+	In number theory, an abundant number or excessive number is a number 
+	for which the sum of its proper divisors is greater than the number 
+	itself.
+	'''
+        count=0
+	ans=3
+	def properdivisors(n):
+	    ans1=[]
+	    for i in range(2,n):
+	        if n%i == 0:
+		    ans1.append(i)
+	    return ans1
+	while True:
+	    if sum ( properdivisors(ans) )>ans:
+	        yield ans
+	    ans=ans+1
+	    count=count+1
+
+>>>>>>> c1d92db1143a39b3d1aa1189fa5cf5b90ff53329
                 
 if __name__=='__main__':
     seq=IntegerSequence()
@@ -233,7 +258,10 @@ if __name__=='__main__':
     #a.append(seq.Catalan())
     a.append(seq.Composite())
     a.append(seq.Abundant())
+<<<<<<< HEAD
     a.append(seq.Triangle())
+=======
+>>>>>>> c1d92db1143a39b3d1aa1189fa5cf5b90ff53329
 
     fs="|"+"%15d |"*len(a)
 

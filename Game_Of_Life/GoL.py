@@ -17,10 +17,17 @@ from time import sleep
 
 
 # GoL array size NxN
+<<<<<<< HEAD
 N=500
 
 # pygame display resolution disp_N x disp_N
 disp_N = 800 
+=======
+N=300
+
+# pygame display resolution disp_N x disp_N
+disp_N = 600 
+>>>>>>> c1d92db1143a39b3d1aa1189fa5cf5b90ff53329
 
 
 # initialize the GoL grid
