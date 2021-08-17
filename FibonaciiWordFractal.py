@@ -1,6 +1,9 @@
 import numpy as np
 
 def FibonacciWord(n):
+    '''
+    Create a Fibonacci Word.
+    '''
     assert n>=0, 'n should be non-negative.'
     
     if n==0:
@@ -12,6 +15,11 @@ def FibonacciWord(n):
         return FibonacciWord(n-1)+FibonacciWord(n-2)
 
 def FibonacciWordFractal(n):
+    '''
+    Create a Fibonacci word fractal. 
+    The coordinates of the fractal are returned.
+    To visualize use a plotting library like matplotlib.
+    '''
     word = FibonacciWord(n)
     forward=np.array([1,0])
     pos = np.array([0,0])
