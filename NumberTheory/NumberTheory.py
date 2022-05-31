@@ -117,6 +117,23 @@ def DigitalRoot(n, base = 10):
     else:
         return 1 + ( (n-1)%(base-1) )
 
+def Kalakoski():
+    '''Please see https://en.wikipedia.org/wiki/Kolakoski_sequence
+    '''
+
+    x1 = 1
+    ans = '1'*x1
+    yield ans[0]
+    x2 = 2
+    ans = ans + '2'*x2
+    yield ans[1]
+    
+    i = 3
+    term = '21'
+    while True:
+        ans = ans + term[i%2]*int(ans[i-1])
+        yield ans[i-1]
+        i = i+1
 
 
 if __name__=="__main__":
