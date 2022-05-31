@@ -105,6 +105,20 @@ def IsPrimitiveAbundant(n):
     else:
         return False
 
+
+def DigitalRoot(n, base = 10):
+    '''The digital root (also repeated digital sum) of a natural number in a given radix is the (single digit) value obtained by an iterative process of summing digits, on each iteration using the result from the previous iteration to compute a digit sum. The process continues until a single-digit number is reached. 
+    --- Wikipedia (https://en.wikipedia.org/wiki/Digital_root)
+
+    The congruence formula has been used.
+    '''
+    if n==0:
+        return 0
+    else:
+        return 1 + ( (n-1)%(base-1) )
+
+
+
 if __name__=="__main__":
     for i in range(32):
         if IsDeficient(i):
